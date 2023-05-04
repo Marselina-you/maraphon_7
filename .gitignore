@@ -126,3 +126,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 Maraphon-7/
+app/fonts/MullerRegular.woff2
