@@ -1,6 +1,10 @@
 .steps {
   padding: 120px 0;
   background-color: var(--light-color);
+
+  @include small-tablet {
+    padding: 60px 0;
+  }
   &__title {
     margin: 0 auto;
     margin-bottom: 57px;
@@ -12,6 +16,11 @@
     line-height: 38px;
     text-align: center;
     letter-spacing: 1.2px;
+
+    @include small-tablet {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
   &__list {
     counter-reset: steps;
@@ -19,6 +28,10 @@
     margin: 0 auto;
     max-width: 758px;
 
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: var(--offset);
+    }
 
   }
   &__item {
@@ -63,6 +76,13 @@
         transform: translateY(-50%);
       }
 
+    }
+
+    @include small-tablet {
+      width: 100%;
+      &::after {
+        display: none;
+      }
     }
   }
   &__descr {

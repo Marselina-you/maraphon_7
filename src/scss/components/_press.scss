@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 33px;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
   }
   &__title {
     margin: 0;
@@ -21,6 +26,10 @@
   }
   &__item {
     grid-column: 4 span;
+  }
+
+  @include small-tablet {
+    padding: 60px 0;
   }
   &__list {
     row-gap: var(--offset);
@@ -36,6 +45,8 @@
     line-height: 20px;
     text-align: center;
     letter-spacing: 0.02px;
+
+
 
 
 
@@ -103,14 +114,36 @@
     line-height: 25px;
     color: #00413E;
 
+
   }
   &__link {
     color: inherit;
+    transition: color 0.3s ease-in-out;
 
     &::after {
       content: "";
       position: absolute;
       inset: 0;
+
+  }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--accent-color);
+    }
+    &:active {
+
+      color: var(--active-color);
     }
   }
+}
+
+.press-card__link:focus-visible {
+  &::after {
+    outline: 1px solid var(--active-color);
+  }
+
 }

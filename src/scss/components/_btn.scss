@@ -11,6 +11,7 @@
   letter-spacing: 0.02px;
   color: var(--light-color);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  cursor: pointer;
 
 
   &:focus {

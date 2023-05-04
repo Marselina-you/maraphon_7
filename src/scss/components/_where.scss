@@ -4,11 +4,24 @@
   color: var(--light-color);
   background-color: #001F1F;
 
+  @include small-tablet {
+    padding: 60px 0;
+  }
+
   &__content {
     grid-column: 4 span;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
   }
   &__map {
     grid-column: 7 / 5 span;
+
+    @include small-tablet {
+      grid-column: 4 span;
+
+    }
   }
   &__title {
     margin: 0;

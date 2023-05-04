@@ -113,8 +113,29 @@ a {
   column-gap: var(--offset);
   grid-template-columns: repeat(12, 1fr);
 
+  @include small-tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
 }
 .graphics {
   width: 100%;
   background-color: #F4F5F5;
+}
+.burger {
+  @include burger;
+
+  --burger-height: 20px;
+
+  display: none;
+  color: var(--light-color);
+
+  @include small-tablet {
+    display: block;
+  }
+
+
+}
+.burger--active {
+  margin-right: 17px;
 }

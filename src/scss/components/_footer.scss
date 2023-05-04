@@ -3,6 +3,17 @@
     padding-top: 112px;
     padding-bottom: 137px;
     background-color: #001414;
+
+    @include small-tablet {
+      padding: 60px 0;
+    }
+
+    .container {
+
+      @include small-tablet {
+        row-gap: var(--offset);
+      }
+    }
   }
   &__bottom {
 
@@ -12,6 +23,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include small-tablet {
+        flex-direction: column;
+
+      }
+
+
     }
     &-text {
       display: flex;
@@ -25,13 +43,27 @@
     padding-bottom: 63px;
   }
 
+  &__logo {
+
+    @include small-tablet {
+      margin: 20px 0;
+    }
+  }
+
   &__column {
     padding-top: 40px;
     padding-bottom: 63px;
     grid-column: 2 span;
 
+
+
     &:last-child {
-      grid-column: 11 / 2 span ;
+      grid-column: 11 / 2 span;
+
+      @include small-tablet {
+        grid-column: 2 span;
+
+      }
     }
   }
   &__link {
@@ -39,6 +71,19 @@
     font-size: 15px;
     line-height: 30px;
     color: #EDECEB;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--accent-color);
+    }
+    &:active {
+      border-color: var(--active-color);
+      color: var(--active-color);
+    }
   }
   &__title {
     position: relative;
@@ -69,13 +114,36 @@
     margin-bottom: 8px;
     gap: 8px;
 
+    @include small-tablet {
+      margin-bottom: 20px;
+      flex-direction: column;
+    }
     &-link {
       font-weight: 400;
       font-size: 9px;
       line-height: 10px;
       color: #E5ECEC;
+      transition: color 0.3s ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+
+      @include hover {
+        color: var(--accent-color);
+      }
+      &:active {
+
+        color: var(--active-color);
+      }
+
+      @include small-tablet {
+        font-size: 14px;
+      }
 
     }
+
+
   }
   &__copy {
     font-weight: 400;
@@ -89,4 +157,16 @@
     line-height: 10px;
     color: #E5ECEC;
   }
+}
+.footer__link:focus-visible {
+  outline: 1px solid var(--active-color);
+  outline-offset: 2px;
+
+
+}
+.footer__sublist-link:focus-visible {
+  outline: 1px solid var(--active-color);
+  outline-offset: 2px;
+
+
 }

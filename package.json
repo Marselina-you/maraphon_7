@@ -12,6 +12,9 @@
     "zip": "gulp zip",
     "code": "editorconfig-checker"
   },
+
+
+
   "author": "MaxGraph",
   "license": "ISC",
   "devDependencies": {
